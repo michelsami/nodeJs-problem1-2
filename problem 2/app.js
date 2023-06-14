@@ -2,6 +2,7 @@
 const fs = require("fs");
 const moment = require('moment');
 
+
 fs.readFile('./problem-2.json', (err, data) => {
 	if (err) throw err;
   
@@ -12,7 +13,7 @@ fs.readFile('./problem-2.json', (err, data) => {
 	for(let i=0; i< dataParsed.accidents.length; i++){
 
 		// convert from string to date 
-		dataParsed.accidents[i].date = new Date(dataParsed.accidents[i].date).toLocaleDateString();
+		dataParsed.accidents[i].date = new Date(dataParsed.accidents[i].date);
 
 		// 3. Convert the dates into the following format YYYY-MM-DD
 		// change date format
